@@ -18,7 +18,13 @@ const Navbar = (props) => {
                             <NavLink className="nav-link"  to="/about">About</NavLink>
                         </li>
                     </ul>
-                    {/* {Add code here} */}
+                    {props.isAuth ? 
+                    <div>
+                        
+                    </div>
+                    }
+
+                    
                 </div>
             </div>
         </nav>
