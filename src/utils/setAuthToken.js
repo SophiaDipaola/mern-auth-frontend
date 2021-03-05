@@ -4,7 +4,14 @@ import axios from 'axios';
 // Any routes that are protected will require the JWT in order to access them.
 
 const setAuthToken = (token) => {
-    // Add code here
+    if(token){
+        axios.dafualts.headers.common['Autherization'] = token
+    console.log('====> HEADERS')
+    console.log(axios.dafualts.headers.common)
+    }else{
+        delete axios.dafualts.headers.common['Autherization']
+    }
+    
 }
 
 export default setAuthToken;
